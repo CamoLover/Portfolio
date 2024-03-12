@@ -38,4 +38,3 @@ $mysqli->close();
 // Redirect back to the referring page (optional)
 header("Location: " . $_SERVER["HTTP_REFERER"]);
 exit();
-?>

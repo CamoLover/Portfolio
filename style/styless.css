@@ -1,0 +1,238 @@
+/* Reset some default styles */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
+}
+:root {
+    --progress-bar-width: 100px;
+    --progress-bar-height: 100px;
+
+  }
+  
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ebeef3;
+    color: #333; /* Default text color */
+}
+
+/* Header styles */
+header {
+    background-color: #0a335a;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    height: 256px;
+    z-index: 2; 
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* User info in header */
+.user-info p {
+    font-size: 14px;
+    margin: 0;
+    color: #ecf0f1;
+}
+
+
+
+/* Content area styles */
+.content {
+    z-index: 99;
+    margin: 100px;
+    margin-top: -125px;
+    padding: 20px;
+}
+
+
+.content {
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #39a5ee;
+    font-size: 28px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    color: #555;
+    font-size: 16px; 
+}
+
+/* Dashboard Stats */
+.dashboard-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+    padding: 12px; 
+    text-align: left;
+}
+
+/* Style for table rows */
+tr {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Style for alternate table rows */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Style for table cells */
+td {
+    padding: 12px; /* Adjusted padding for better alignment */
+}
+
+/* Style for images inside table cells */
+td img {
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+
+.circular-progress {
+    width: var(--progress-bar-width);
+    height: var(--progress-bar-height);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inner-circle {
+    position: absolute;
+    width: calc(var(--progress-bar-width) - 30px);
+    height: calc(var(--progress-bar-height) - 30px);
+    border-radius: 50%;
+    background-color: lightgrey;
+}
+
+.svg-background {
+    position: absolute;
+    width: 45%;
+    height: 45%;
+    border-radius: 1%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.percentage {
+    position: relative;
+    margin-top: 120px;
+    font-size: var(--font-size);
+    color: rgba(0, 0, 0, 0.8);
+}
+.Stats_languages{
+    display: flex;
+}
+.separator{
+    width: 100%;
+    background-color: #bec2c3;
+    height: 1px;
+    border: 0;
+}
+
+.menuHeader{
+    margin-top: 40px;
+}
+.headerLink {
+    margin-left: 40px;
+    margin-right: 40px;
+    color: white; 
+    text-decoration: none;
+    transition: color 0.3s; 
+}
+
+.headerLink:hover {
+    color: rgb(2, 255, 234); 
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    transition: color 0.3s; 
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-menu {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .footer-menu li {
+    display: inline-block;
+    margin: 0 20px;
+  }
+  
+  .footer-menu li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-menu li a:hover {
+    color: #aaa;
+  }
+  
+  .footer-info {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .footer-info p {
+    margin: 0;
+  }
+@media screen and (max-width: 768px) {
+    .Stats_languages{
+        display:block
+    }
+    .separator{
+        width: 75%;
+    }
+    .content {
+        z-index: 99;
+        margin: 25px;
+        margin-top: -75px;
+        padding: 20px;
+    }
+    .footer-menu {
+        display: block;
+        text-align: center;
+      }
+      
+      .footer-menu li {
+        display: block;
+        margin: 10px 0;
+      }
+}
