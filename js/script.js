@@ -38,3 +38,7 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
+
+document.getElementById('navbarToggle').addEventListener('click', function() {
+  document.getElementById('navLinks').classList.toggle('active');
+});

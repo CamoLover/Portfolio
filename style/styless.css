@@ -21,9 +21,10 @@ canvas {
 
 .container {
     display: flex;
+    justify-content: center;
 }
 
-.navbar {
+  .navbar {
     position: fixed;
     width: 100%;
     top: 0;
@@ -31,41 +32,26 @@ canvas {
     z-index: 1000;
     padding: 0 20px;
     box-sizing: border-box;
-}
-
-#navbar-transparent {
     background-color: rgba(0, 0, 0, 0);
     height: 60px;
-    border-bottom: 0px;
-    transition: background-color .5s ease;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-}
-
-#navbar-transparent.opaque {
-    background-color: #001723;
+    justify-content: center;
     transition: background-color .5s ease;
 }
 .fulll{
-    min-width: calc(100% - 800px);
+  width: 10vw;
 }
+.navbar.opaque {
+    background-color: #001723;
+    transition: background-color .5s ease;
+}
+
 .navbar-header .navbar-brand {
     color: rgb(227, 209, 255);
     text-decoration: none;
     font-size: 24px;
     font-weight: bold;
-    padding-left: 250px; 
-}
-
-.HeaderRight {
-    color: rgb(227, 209, 255);
-    text-decoration: none;
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
-    display: block;
-    transition: color .3s;
 }
 
 .nav {
@@ -73,7 +59,6 @@ canvas {
     margin: 0;
     padding: 0;
     display: flex;
-    align-items: center;
 }
 
 .nav li {
@@ -87,15 +72,24 @@ canvas {
     padding: 10px 15px;
     display: block;
     transition: color .3s;
-    white-space: nowrap; 
+    white-space: nowrap;
 }
 
 .nav a:hover {
     color: #e79e00;
 }
 
+.navbar-toggle {
+    display: none;
+    color: #e79e00;
+    font-size: 24px;
+    cursor: pointer;
+}
+
 .presentation {
     display: flex; 
+    align-items: center;
+    justify-content: center;
 }
 
 .lines {
@@ -154,15 +148,6 @@ h2 {
     margin: 10px 0;
 }
 
-#A-propos {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    color: rgb(227, 209, 255);
-    padding-top: 100px;
-    padding-left: 250px;
-    padding-right: 250px;
-}
 
 .cvBTN {
 	background-color:#e79e00;
@@ -183,31 +168,21 @@ h2 {
 	top:1px;
 }
 
-#about {
-    justify-content: center; 
-    align-items: center; 
-    color: rgb(227, 209, 255);
-    padding-top: 100px;
-    padding-left: 250px;
-    padding-right: 250px;
+#A-propos {
+  color: rgb(227, 209, 255);
+  padding-top: 100px;
+  align-items: center;
+  justify-content: center;
 }
 
-#skills {
+#about,
+#skills,
+#experience,
+#portfolio {
   justify-content: center; 
   align-items: center; 
   color: rgb(227, 209, 255);
   padding-top: 100px;
-  padding-left: 250px;
-  padding-right: 250px;
-}
-
-#experience {
-  justify-content: center; 
-  align-items: center; 
-  color: rgb(227, 209, 255);
-  padding-top: 100px;
-  padding-left: 250px;
-  padding-right: 250px;
 }
 
 .card{
@@ -221,7 +196,6 @@ h2 {
 .cardTimeline{
   display: flex;
   justify-content: center; 
-
   padding-left: 150px;
   padding-right: 150px;
 }
@@ -242,7 +216,6 @@ figure {
     display: grid;
     border-radius: 1rem;
     overflow: hidden;
-    cursor: pointer;
   }
   figure > * {
     grid-area: 1/1;
@@ -252,13 +225,11 @@ figure {
   figure figcaption {
     display: grid;
     align-items: end;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #fff;
-    padding: .75rem;
+    padding: .5rem;
     background: var(--c,#0009);
     clip-path: inset(0 var(--_i,100%) 0 0);
-    -webkit-mask-composite: xor;
-    -webkit-mask-clip: text, padding-box;
     margin: -1px;
   }
   figure:hover figcaption{
@@ -267,15 +238,6 @@ figure {
   figure:hover img {
     transform: scale(1.05);
   }
-
-
-
-
-
-
-
-
-
 
   .mySlides {
     display: none
@@ -427,6 +389,8 @@ figure {
   .nft{
     user-select:none;
     max-width: 300px;
+    height: 540px;
+    min-height: 540px;
     margin: 5rem auto;
     border: 1px solid #ffffff22;
     background-color: #282c34;
@@ -523,3 +487,130 @@ figure {
       filter: opacity(0.5);
     }
   }
+
+
+
+
+
+  .linear-wipe {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(90deg, #FF6F61, #C7CEEA, #6B5B95, #88B04B, #F7CAC9, #92A8D1, #FFD966, #5D9B9B, #9E1030, #FEC8D8);
+    background-size: 200% auto;
+    color: #000;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 1s linear infinite;
+}
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  body {
+    background-size: cover;
+  }
+  .navbar-toggle {
+    display: block;
+}
+
+.nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #001723;
+}
+
+.nav.active {
+    display: flex;
+}
+
+  .presentation {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .linesss {
+    padding: 0 20px;
+  }
+
+  .prez2 {
+    padding: 0;
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .cvBTN {
+    font-size: 14px;
+    padding: 7px 15px;
+  }
+  .linesss{
+    display: none
+  }
+  .card,
+  .cardTimeline {
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .timeline-info {
+    margin-left: 4em;
+    max-width: 100%;
+  }
+
+  .nft {
+    max-width: 90%;
+    height: auto;
+    margin: 2rem auto;
+  }
+
+  .slideshow-container {
+    max-width: 90%;
+    margin-top: 50px;
+  }
+
+  .linear-wipe {
+    font-size: 24px;
+  }
+
+  .bg h1 {
+    font-size: 10rem;
+  }
+
+  /* Hide the figures on mobile */
+  figure {
+    display: none;
+  }
+
+  /* Remove the "lines" competence section */
+  .lines {
+    display: none;
+  }
+
+
+
+  /* Adjust portfolio section to display in one column */
+  .portfolio .nft {
+    display: block;
+    margin: 10px auto;
+  }
+}
