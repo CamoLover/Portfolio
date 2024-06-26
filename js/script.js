@@ -1,29 +1,40 @@
-const circularProgress = document.querySelectorAll(".circular-progress");
+var transnav = document.getElementById("navbar-transparent");
 
-Array.from(circularProgress).forEach((progressBar) => {
-    const progressValue = progressBar.querySelector(".percentage");
-    const innerCircle = progressBar.querySelector(".inner-circle");
-    const svgBackground = progressBar.querySelector(".svg-background"); 
-    let startValue = 0,
-        endValue = Number(progressBar.getAttribute("data-percentage")),
-        speed = 8,
-        progressColor = progressBar.getAttribute("data-progress-color");
+window.onscroll = function() {toggleOpaque()};
 
-    svgBackground.style.backgroundImage = `url(${progressBar.getAttribute("data-svg")})`;
+function toggleOpaque() {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        transnav.classList.add("opaque");
+    } else {
+        transnav.classList.remove("opaque");
+    }
+}
 
-    const progress = setInterval(() => {
-        startValue++;
-        progressValue.textContent = `${startValue}%`;
 
-        innerCircle.style.backgroundColor = `${progressBar.getAttribute(
-            "data-inner-circle-color"
-        )}`;
 
-        progressBar.style.background = `conic-gradient(${progressColor} ${
-            startValue * 3.6
-        }deg,${progressBar.getAttribute("data-bg-color")} 0deg)`;
-        if (startValue === endValue) {
-            clearInterval(progress);
-        }
-    }, speed);
-});
+let slideIndex = 0;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
