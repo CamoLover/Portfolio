@@ -1,6 +1,6 @@
 # Portfolio Project
 
-This is a personal portfolio website built in PHP, showcasing various projects and skills. It includes project details, an about section, contact information, and links to social media profiles. The project is available to view online at [camolover.dev](https://camolover.dev/APP/portfolio/).
+This is a personal portfolio website built in PHP, showcasing various projects and skills. It includes project details, an about section, skills and an experience history. The project is available to view online at [camolover.dev](https://camolover.dev/APP/portfolio/).
 
 ## Table of Contents
 - [Features](#features)
