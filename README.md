@@ -29,9 +29,9 @@ This is a personal portfolio website built in PHP, showcasing various projects a
    git clone https://github.com/yourusername/portfolio.git
    ```
 2. Navigate to the project directory:
-  ```bash
+    ```bash
     cd portfolio
-  ```
+    ```
 3. Set up a local server (e.g., using XAMPP or MAMP).
 4. Run the project by opening index.php in the server's public directory.
 
