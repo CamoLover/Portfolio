@@ -40,13 +40,11 @@ Visit the homepage to browse projects, read about experiences and skills, and us
 Project Structure
 ```plaintext
 portfolio/
-├── css/                   # Stylesheets for styling the portfolio
-├── img/                   # Image assets used in the portfolio
+├── style/                 # Stylesheets for styling the portfolio
+├── media/                 # Image assets used in the portfolio
 ├── js/                    # JavaScript files for any interactive elements
-├── projects/              # PHP files for individual projects
-├── index.php              # Main landing page
-├── about.php              # About page content
-├── contact.php            # Contact form processing
+├── partials/              # PHP files for each section of the portfolio
+├── index.php              # Main page
 └── README.md              # Project documentation
 ```
 
