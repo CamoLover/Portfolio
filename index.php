@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evan E | Portfolio</title>
-    <link href="style/styless.css" rel="stylesheet">
+    <link href="style/portfolio.css" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,11 +34,7 @@
     <?php include 'partials/experience.php'; ?>
     <?php include 'partials/portfolio.php'; ?>
 
-    <script src="https://threejs.org/build/three.min.js"></script>
-    <script src="https://threejs.org/examples/js/loaders/GLTFLoader.js"></script>
-    <script src="https://threejs.org/examples/js/loaders/DRACOLoader.js"></script>
-    <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/scripts.js"></script>
 </div>
 </body>
 </html>

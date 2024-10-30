@@ -1,7 +1,7 @@
 <nav class="navbar" id="navbar-transparent">
     <div class="container">
         <div class="navbar-header">
-            <a href="https://unisteal.site" class="linear-wipe navbar-brand">UNISTEAL</a>
+            <a href="https://camolover.dev" class="linear-wipe navbar-brand">camolover.dev</a>
         </div>
         <span class="fulll"></span>
         <div class="navbar-toggle" id="navbarToggle">

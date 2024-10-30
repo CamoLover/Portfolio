@@ -42,7 +42,7 @@
             <span class="liness"></span>
         </div>
         <div>
-            <h3>Diplôme</h3>
+            <h3>Certifications</h3>
             <div class="slideshow-container">
                 <?php
                 $certifications = ['netacad.png', 'ANSII.png', 'pix.png'];
