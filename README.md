@@ -20,8 +20,7 @@ This is a personal portfolio website built in PHP, showcasing various projects a
 ## Technologies Used
 - **PHP:** For server-side functionality and content management.
 - **HTML5 & CSS3:** For structure and styling.
-- **JavaScript (optional):** For interactive elements.
-- **Bootstrap (or any other CSS framework, if applicable):** For responsive design.
+- **JavaScript:** For interactive elements.
   
 ## Installation
 1. **Clone the repository:**
