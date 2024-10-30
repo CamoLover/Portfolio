@@ -28,12 +28,12 @@ This is a personal portfolio website built in PHP, showcasing various projects a
    ```bash
    git clone https://github.com/yourusername/portfolio.git
    ```
-Navigate to the project directory:
+2. Navigate to the project directory:
   ```bash
     cd portfolio
   ```
-Set up a local server (e.g., using XAMPP or MAMP).
-Run the project by opening index.php in the server's public directory.
+3. Set up a local server (e.g., using XAMPP or MAMP).
+4. Run the project by opening index.php in the server's public directory.
 
 ## Usage
 Visit the homepage to browse projects, read about experiences and skills, and use the contact form to reach out. The layout is designed to adapt to different screen sizes, ensuring a pleasant experience on both desktop and mobile.
