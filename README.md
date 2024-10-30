@@ -52,6 +52,6 @@ portfolio/
 For any questions or feedback, feel free to reach out via the contact form on the website or connect through social media.
 
 Author: CamoLover
-Website: [camolover.dev](https://camolover.dev)
+Website: [camolover.dev](https://camolover.dev/APP/portfolio/)
 
 Thank you for checking out my portfolio!
