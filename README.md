@@ -43,7 +43,9 @@ portfolio/
 ├── style/                 # Stylesheets for styling the portfolio
 ├── media/                 # Image assets used in the portfolio
 ├── js/                    # JavaScript files for any interactive elements
-├── partials/              # PHP files for each section of the portfolio
+├── other/                 # Configuration files
+├── veille/                # Technical watch documents
+├── vendor/                # Composer dependencies
 ├── index.php              # Main page
 └── README.md              # Project documentation
 ```
