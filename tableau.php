@@ -39,6 +39,15 @@ if (!isset($_SESSION['TS_authorized']) || $_SESSION['TS_authorized'] !== true) {
         <div class="max-w-7xl mx-auto">
             <h1 class="text-3xl font-bold mb-8 text-center gradient-text">Tableau de synthèse des réalisations professionnelles</h1>
             
+            <div class="text-center mb-6">
+                <a href="./media/TableauSyntheseE5.pdf" target="_blank" class="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-lg transition-colors">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 12l-4-4h8l-4 4z"/>
+                    </svg>
+                    Télécharger la version PDF
+                </a>
+            </div>
+
             <div class="overflow-x-auto bg-gray-800 bg-opacity-50 rounded-lg shadow-xl p-4 border border-purple-900">
                 <table class="w-full border-collapse">
                     <thead>
@@ -76,34 +85,25 @@ if (!isset($_SESSION['TS_authorized']) || $_SESSION['TS_authorized'] !== true) {
                             <td class="text-center py-3 px-4 border-b border-purple-700"></td>
                             <td class="text-center py-3 px-4 border-b border-purple-700"></td>
                             <td class="bg-purple-700 bg-opacity-30 text-center py-3 px-4 border-b border-purple-700"><span class="text-green-400 text-xl">✅</span></td>
-                            <td class="bg-purple-700 bg-opacity-30 text-center py-3 px-4 border-b border-purple-700"><span class="text-green-400 text-xl">✅</span></td>
+                            <td class="text-center py-3 px-4 border-b border-purple-700"></td>
                             <td class="text-center py-3 px-4 border-b border-purple-700"></td>
                             <td class="bg-purple-700 bg-opacity-30 text-center py-3 px-4 border-b border-purple-700"><span class="text-green-400 text-xl">✅</span></td>
                         </tr>
                         <tr class="hover:bg-purple-900 hover:bg-opacity-20 transition-colors duration-200">
-                            <td class="bg-purple-800 bg-opacity-30 font-medium py-3 px-4 text-white border-b border-purple-700">client.pixeleur.fr</td>
-                            <td class="text-center py-3 px-4 border-b border-purple-700"></td>
-                            <td class="text-center py-3 px-4 border-b border-purple-700"></td>
-                            <td class="bg-purple-700 bg-opacity-30 text-center py-3 px-4 border-b border-purple-700"><span class="text-green-400 text-xl">✅</span></td>
-                            <td class="bg-purple-700 bg-opacity-30 text-center py-3 px-4 border-b border-purple-700"><span class="text-green-400 text-xl">✅</span></td>
-                            <td class="bg-purple-700 bg-opacity-30 text-center py-3 px-4 border-b border-purple-700"><span class="text-green-400 text-xl">✅</span></td>
-                            <td class="bg-purple-700 bg-opacity-30 text-center py-3 px-4 border-b border-purple-700"><span class="text-green-400 text-xl">✅</span></td>
-                        </tr>
-                        <tr class="hover:bg-purple-900 hover:bg-opacity-20 transition-colors duration-200">
-                            <td class="bg-purple-800 bg-opacity-30 font-medium py-3 px-4 text-white border-b border-purple-700">Admin.Pixeleur.fr</td>
-                            <td class="text-center py-3 px-4 border-b border-purple-700"></td>
+                            <td class="bg-purple-800 bg-opacity-30 font-medium py-3 px-4 text-white">Ultraline.app</td>
                             <td class="bg-purple-700 bg-opacity-30 text-center py-3 px-4 border-b border-purple-700"><span class="text-green-400 text-xl">✅</span></td>
                             <td class="text-center py-3 px-4 border-b border-purple-700"></td>
                             <td class="bg-purple-700 bg-opacity-30 text-center py-3 px-4 border-b border-purple-700"><span class="text-green-400 text-xl">✅</span></td>
                             <td class="text-center py-3 px-4 border-b border-purple-700"></td>
                             <td class="bg-purple-700 bg-opacity-30 text-center py-3 px-4 border-b border-purple-700"><span class="text-green-400 text-xl">✅</span></td>
+                            <td class="bg-purple-700 bg-opacity-30 text-center py-3 px-4 border-b border-purple-700"><span class="text-green-400 text-xl">✅</span></td>                            
                         </tr>
                         <tr class="hover:bg-purple-900 hover:bg-opacity-20 transition-colors duration-200">
                             <td class="bg-purple-800 bg-opacity-30 font-medium py-3 px-4 text-white border-b border-purple-700">AixMobile</td>
                             <td class="text-center py-3 px-4 border-b border-purple-700"></td>
                             <td class="text-center py-3 px-4 border-b border-purple-700"></td>
                             <td class="bg-purple-700 bg-opacity-30 text-center py-3 px-4 border-b border-purple-700"><span class="text-green-400 text-xl">✅</span></td>
-                            <td class="bg-purple-700 bg-opacity-30 text-center py-3 px-4 border-b border-purple-700"><span class="text-green-400 text-xl">✅</span></td>
+                            <td class="text-center py-3 px-4 border-b border-purple-700"></td>
                             <td class="bg-purple-700 bg-opacity-30 text-center py-3 px-4 border-b border-purple-700"><span class="text-green-400 text-xl">✅</span></td>
                             <td class="text-center py-3 px-4 border-b border-purple-700"></td>
                         </tr>
@@ -112,12 +112,24 @@ if (!isset($_SESSION['TS_authorized']) || $_SESSION['TS_authorized'] !== true) {
                             <td class="text-center py-3 px-4"></td>
                             <td class="bg-purple-700 bg-opacity-30 text-center py-3 px-4"><span class="text-green-400 text-xl">✅</span></td>
                             <td class="bg-purple-700 bg-opacity-30 text-center py-3 px-4"><span class="text-green-400 text-xl">✅</span></td>
-                            <td class="bg-purple-700 bg-opacity-30 text-center py-3 px-4"><span class="text-green-400 text-xl">✅</span></td>
-                            <td class="bg-purple-700 bg-opacity-30 text-center py-3 px-4"><span class="text-green-400 text-xl">✅</span></td>
+                            <td class="text-center py-3 px-4"></td>
+                            <td class="text-center py-3 px-4"></td>
                             <td class="text-center py-3 px-4"></td>
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            
+            <div class="mt-8 mb-8">
+                <h2 class="text-2xl font-bold mb-4 text-center gradient-text">Version PDF intégrée</h2>
+                <div class="w-full bg-gray-800 bg-opacity-50 rounded-lg shadow-xl p-4 border border-purple-900">
+                    <object data="./media/TableauSyntheseE5.pdf" type="application/pdf" class="w-full" style="height: 800px;">
+                        <p class="text-center text-gray-400">
+                            Votre navigateur ne peut pas afficher le PDF directement. 
+                            <a href="./media/TableauSyntheseE5.pdf" class="text-purple-400 hover:text-purple-300" target="_blank">Cliquez ici pour le télécharger</a>.
+                        </p>
+                    </object>
+                </div>
             </div>
             
             <div class="mt-12 text-center">

@@ -1,3 +1,14 @@
+// Add base path constant at the top of the file
+const BASE_PATH = '/APP/Portfolio/new';
+
+// Helper function to ensure correct URL formatting
+function getFullUrl(url) {
+    if (!url) return '';
+    if (url.startsWith('http')) return url;
+    if (url.startsWith(BASE_PATH)) return url;
+    return `${BASE_PATH}${url.replace(/^\.?\//, '/')}`;
+}
+
 document.querySelectorAll('a[href]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         // Get the link's ID
@@ -162,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (lightbox && lightboxImage) {
         window.openLightbox = function(imageUrl) {
-            lightboxImage.src = imageUrl;
+            lightboxImage.src = getFullUrl(imageUrl);
             lightbox.classList.remove('hidden');
             lightbox.classList.add('flex');
             
@@ -183,7 +194,8 @@ document.addEventListener('DOMContentLoaded', function() {
 let currentGalleryImages = [];
 let currentImageIndex = 0;
 
-function openProjectModal(projectName) {
+// Expose openProjectModal to global scope
+window.openProjectModal = function(projectName) {
     const projectDetails = window.projectDetails[projectName];
     if (!projectDetails) {
         console.error('Project details not found for:', projectName);
@@ -219,21 +231,30 @@ function openProjectModal(projectName) {
     if (titleElement) titleElement.textContent = projectName || '';
     if (descriptionElement) descriptionElement.textContent = projectDetails.fullDescription || '';
     
-    // Populate features
-    const featuresList = document.getElementById('modal-project-features');
-    if (featuresList && Array.isArray(projectDetails.features)) {
-        featuresList.innerHTML = projectDetails.features
-            .filter(feature => feature) // Remove null/undefined items
-            .map(feature => `<li>${escapeHtml(feature)}</li>`)
+    // Populate paragraphe1 (formerly features)
+    const paragraphe1List = document.getElementById('modal-project-paragraphe1');
+    if (paragraphe1List && Array.isArray(projectDetails.paragraphe1)) {
+        paragraphe1List.innerHTML = projectDetails.paragraphe1
+            .filter(item => item) // Remove null/undefined items
+            .map(item => `<p class="mb-2">${escapeHtml(item)}</p>`)
             .join('');
     }
     
-    // Populate challenges
-    const challengesList = document.getElementById('modal-project-challenges');
-    if (challengesList && Array.isArray(projectDetails.challenges)) {
-        challengesList.innerHTML = projectDetails.challenges
-            .filter(challenge => challenge) // Remove null/undefined items
-            .map(challenge => `<li>${escapeHtml(challenge)}</li>`)
+    // Populate paragraphe2 (formerly challenges)
+    const paragraphe2List = document.getElementById('modal-project-paragraphe2');
+    if (paragraphe2List && Array.isArray(projectDetails.paragraphe2)) {
+        paragraphe2List.innerHTML = projectDetails.paragraphe2
+            .filter(item => item) // Remove null/undefined items
+            .map(item => `<p class="mb-2">${escapeHtml(item)}</p>`)
+            .join('');
+    }
+
+    // Populate paragraphe3 (formerly technicalDetails)
+    const paragraphe3List = document.getElementById('modal-project-paragraphe3');
+    if (paragraphe3List && Array.isArray(projectDetails.paragraphe3)) {
+        paragraphe3List.innerHTML = projectDetails.paragraphe3
+            .filter(item => item) // Remove null/undefined items
+            .map(item => `<p class="mb-2">${escapeHtml(item)}</p>`)
             .join('');
     }
 
@@ -326,8 +347,7 @@ function updateGallery() {
                 return;
             }
             
-            // Handle both relative and absolute URLs
-            const imageUrl = image.url.startsWith('http') ? image.url : image.url.replace(/^\.?\//, '/');
+            const imageUrl = getFullUrl(image.url);
             const imageTitle = image.title || '';
             
             container.innerHTML = `
@@ -360,8 +380,7 @@ function updateGallery() {
         galleryContainer.innerHTML = currentGalleryImages
             .filter(image => image && image.url) // Filter out invalid images
             .map(image => {
-                // Handle both relative and absolute URLs
-                const imageUrl = image.url.startsWith('http') ? image.url : image.url.replace(/^\.?\//, '/');
+                const imageUrl = getFullUrl(image.url);
                 const imageTitle = image.title || '';
                 
                 return `
@@ -398,11 +417,8 @@ window.openImagePreview = function(imageUrl, title) {
     }
     
     try {
-        // Clean the URL by removing any leading dots
-        const cleanUrl = imageUrl.replace(/^\./, '');
-        
-        // Set up new image and title
-        image.src = cleanUrl;
+        // Use the helper function to get the correct URL
+        image.src = getFullUrl(imageUrl);
         titleElement.textContent = title || '';
         
         // Show modal
@@ -510,7 +526,7 @@ window.openLightbox = function(imageUrl) {
     
     if (!lightbox || !lightboxImage) return;
     
-    lightboxImage.src = imageUrl;
+    lightboxImage.src = getFullUrl(imageUrl);
     
     // Add zoom effect class
     lightboxImage.classList.add('lightbox-zoom');
@@ -536,3 +552,17 @@ window.closeLightbox = function() {
     lightbox.classList.remove('flex');
     lightboxImage.classList.remove('lightbox-zoom');
 };
+
+// Function to toggle veille content visibility
+window.toggleVeilleContent = function(contentId) {
+    const content = document.getElementById(`content-${contentId}`);
+    const icon = document.getElementById(`icon-${contentId}`);
+    
+    if (content && icon) {
+        // Toggle content visibility
+        content.classList.toggle('hidden');
+        
+        // Rotate icon when content is visible
+        icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+    }
+}

@@ -536,37 +536,40 @@ include "./other/config.php";
 
                 <!-- Content sections -->
                 <div class="p-6 space-y-12" id="modal-content-sections">
-                    <!-- Features section -->
+                    <!-- Paragraphe1 section -->
                     <div class="flex flex-col md:flex-row items-center gap-8">
                         <div class="w-full md:w-1/2 space-y-4">
-                            <h3 class="text-xl font-bold text-white">Caractéristiques</h3>
-                            <ul id="modal-project-features" class="list-disc list-inside text-gray-300"></ul>
+                            <div id="modal-project-paragraphe1" class="text-gray-300"></div>
                         </div>
                         <div class="w-full md:w-1/2 project-image-container">
                             <!-- First image will be inserted here -->
                         </div>
                     </div>
 
-                    <!-- Challenges section -->
+                    <!-- Paragraphe2 section -->
                     <div class="flex flex-col md:flex-row-reverse items-center gap-8">
                         <div class="w-full md:w-1/2 space-y-4">
-                            <h3 class="text-xl font-bold text-white">Défis</h3>
-                            <ul id="modal-project-challenges" class="list-disc list-inside text-gray-300"></ul>
+                            <div id="modal-project-paragraphe2" class="text-gray-300"></div>
                         </div>
                         <div class="w-full md:w-1/2 project-image-container">
                             <!-- Second image will be inserted here -->
                         </div>
                     </div>
 
-                    <!-- Competencies section -->
+                    <!-- Paragraphe3 section -->
                     <div class="flex flex-col md:flex-row items-center gap-8">
                         <div class="w-full md:w-1/2 space-y-4">
-                            <h3 class="text-xl font-bold text-white">Compétences</h3>
-                            <div id="modal-project-competencies" class="flex flex-wrap gap-2"></div>
+                            <div id="modal-project-paragraphe3" class="text-gray-300"></div>
                         </div>
                         <div class="w-full md:w-1/2 project-image-container">
                             <!-- Third image will be inserted here -->
                         </div>
+                    </div>
+
+                    <!-- Competencies section -->
+                    <div class="mt-8">
+                        <h3 class="text-xl font-bold text-white mb-4">Compétences</h3>
+                        <div id="modal-project-competencies" class="flex flex-wrap gap-2"></div>
                     </div>
 
                     <!-- Additional images -->

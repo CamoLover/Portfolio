@@ -31,14 +31,9 @@ $config = [
             'description' => 'Site web professionnel présentant le studio de développement de jeux vidéo Pixeleur. La plateforme met en avant les projets, l\'expertise et les services du studio, servant de vitrine principale pour l\'entreprise.'
         ],
         [
-            'name' => 'Client.Pixeleur.fr',
-            'url' => 'https://client.pixeleur.fr',
-            'description' => 'Interface client pour les clients de Pixeleur, permettant aux clients d\'intéragir avec leurs commandes.'
-        ],
-        [
-            'name' => 'Admin.Pixeleur.fr',
-            'url' => 'https://admin.pixeleur.fr',
-            'description' => 'Interface d\'administration pour le site web de Pixeleur, gestion des multiple sites web, des commandes en cours, et des projets.'
+            'name' => 'Ultraline.app',
+            'url' => 'https://ultraline.app',
+            'description' => 'Ultraline.app est une application de monitoring pour server et hardware en général. Il est disponible pour windows and distribution Linux ARM7, ARM64 et intel64. Ultraline est un dahsboard complétement modulable avec une quinzaine de module différent.'
         ],
     ],
     'skills' => [
@@ -131,7 +126,7 @@ $config['projectOwners'] = [
     ],
     'Ecole' => [
         'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPmxnFHoeax0enU_k9oNBHZz3TVNL0czLrMQ&s',
-        'text' => 'CCI'
+        'text' => 'Académie Vaucluse Provence'
     ],
 ];
 
@@ -140,10 +135,9 @@ $config['projectSkills'] = [
     'GLPI' => ['Informatique', 'Gestion de parc', 'Gestion de ticket'],
     'Fast Sushi' => ['PHP8', 'Java', 'MySQL', 'HTML5', 'CSS3', 'JavaScript', 'Java', 'JavaFX'],
     'Pixeleur.fr' => ['PHP8', 'JavaScript', 'HTML5', 'CSS3', 'MySQL'],
-    'Client.Pixeleur.fr' => ['PHP8', 'JavaScript', 'HTML5', 'CSS3', 'MySQL'],
-    'Admin.Pixeleur.fr' => ['PHP8', 'JavaScript', 'HTML5', 'CSS3', 'MySQL'],
     'AixMobile' => ['PHP7', 'JavaScript', 'HTML5', 'CSS3', 'MySQL'],
     'DélibArch' => ['PHP5', 'PHP7', 'JavaScript', 'HTML5', 'CSS3', 'MySQL'],
+    'Ultraline.app' => ['PHP8', 'Javascript', 'HTML5', 'TailwindCSS', 'MySQL', 'API Stripe', 'vue.js'],
 ];
 
 // Add ownership to projects
@@ -151,10 +145,9 @@ $config['projectOwnership'] = [
     'GLPI' => 'Ecole',
     'Fast Sushi' => 'Ecole',
     'Pixeleur.fr' => 'pixeleur',
-    'Client.Pixeleur.fr' => 'pixeleur',
-    'Admin.Pixeleur.fr' => 'pixeleur',
     'AixMobile' => 'Mairie',
     'DélibArch' => 'Mairie',
+    'Ultraline.app' => 'pixeleur',
 ];
 $config['certifications'] = [
     [
@@ -179,12 +172,18 @@ $config['certifications'] = [
 $config['projectDetails'] = [
     'GLPI' => [
         'fullDescription' => 'Installation de GLPI pour système de ticket et gestion de parc informatique pour un centre de formation. Basé sur Kali Linux.',
-        'features' => [
-            'Gestion de ticket',
-            'Gestion de parc',
+        'paragraphe1' => [
+            'Le projet GLPI a été mis en place pour répondre aux besoins de gestion du parc informatique du centre de formation.',
+            'L\'interface principale, moderne et intuitive, permet une navigation fluide entre les différentes fonctionnalités du système.',
+            'Les utilisateurs peuvent facilement accéder à l\'inventaire du matériel, consulter les statistiques d\'utilisation et gérer les ressources informatiques de manière centralisée.'
         ],
-        'challenges' => [
-            'Installation du serveur GLPI sur KaliLinux'
+        'paragraphe2' => [
+            'Le système de tickets, élément central de la solution, offre une plateforme robuste pour la gestion des incidents et des demandes d\'assistance.',
+            'Les utilisateurs peuvent créer, suivre et résoudre les tickets de support, avec des fonctionnalités avancées comme la catégorisation, la priorisation et l\'attribution automatique des demandes.'
+        ],
+        'paragraphe3' => [
+            'L\'infrastructure repose sur une distribution Kali Linux, choisie pour sa robustesse et ses fonctionnalités de sécurité avancées.',
+            'La base de données MariaDB assure une gestion efficace des données, offrant performances et fiabilité pour l\'ensemble du système.'
         ],
         'gallery' => [
             [
@@ -194,11 +193,11 @@ $config['projectDetails'] = [
             [
                 'url' => './media/projects/glpi/ticket.png',
                 'title' => 'Système de tickets'
+            ],
+            [
+                'url' => './media/projects/glpi/kali.png',
+                'title' => 'Kali Linux'
             ]
-        ],
-        'technicalDetails' => [
-            'Basée sur KaliLinux',
-            'Base de données MariaDB'
         ],
         'competence' => [
             'Gérer le patrimoine informatique'
@@ -206,13 +205,20 @@ $config['projectDetails'] = [
     ],
     'Fast Sushi' => [
         'fullDescription' => 'En tant que Responsable développement, j\'ai dirigé mon équipe dans la création d\'une d\'un site de sushi, avec interface client pour commande, et un client lourd en java pour  la gestion du site et des commandes par les employés et préparateur de commandes.',
-        'features' => [
-            'Application web pour les clients (Achat, voir les plats, commander)',
-            'Interface administration pour les employés via client lourd en java (gestion des commandes, préparation des commandes, gestion des produits)',
+        'paragraphe1' => [
+            'Dans le cadre de l\'épreuve E6 du BTS SIO option SLAM, notre équipe de 4 étudiants a collaboré sur le projet Fast Sushi.',
+            'La gestion du projet a été orchestrée via Trello, permettant une organisation claire des tâches et une coordination efficace entre les membres de l\'équipe.',
+            'En tant que responsable développement, j\'ai assurer une répartition équitable des tâches.'
         ],
-        'challenges' => [
-            'Gestion d\'équipe: Coordination de multiples développeurs',
-            'Architecture: Conception d\'un système modulaire et évolutif en PHP laravel pour le client léger et Java FX pour le client lourd',
+        'paragraphe2' => [
+            'L\'interface client du site présente une carte détaillée des sushis disponibles, avec des photos appétissantes et des descriptions précises.',
+            'Le système de commande en ligne a été conçu pour être intuitif, permettant aux clients de personnaliser leurs commandes et de suivre leur préparation en temps réel.',
+            'La page d\'accueil met en avant les promotions du moment et les plats les plus populaires, incitant à la commande.'
+        ],
+        'paragraphe3' => [
+            'Le développement technique s\'est appuyé sur PHP Laravel pour le front-end, offrant une expérience utilisateur fluide et responsive.',
+            'Le back-end, développé en Java FX, permet aux employés de gérer efficacement les commandes et les stocks.',
+            'L\'architecture du projet utilise une base de données MySQL optimisée pour la gestion en temps réel des commandes.'
         ],
         'gallery' => [
             [
@@ -238,14 +244,13 @@ $config['projectDetails'] = [
             [
                 'url' => './media/projects/fastsushi/migration.png',
                 'title' => 'Schéma de migration'
+            ],
+            [
+                'url' => './media/projects/fastsushi/trello2.png',
+                'title' => 'trello tache'
             ]
         ],
         'githubUrl' => 'https://github.com/CamoLover/-FastSushi',
-        'technicalDetails' => [
-            'Frontend: Tailwind CSS, JavaScript, PHP Laravel',
-            'Backend: Java FX',
-            'Base de données MySQL'
-        ],
         'competence' => [
             'Travailler en mode projet'
         ]
@@ -255,14 +260,19 @@ $config['projectDetails'] = [
     //////////////////////////////////////////////////////////////////
     'AixMobile' => [
         'fullDescription' => 'Création d\'une application type linktree pour la mairie d\'Aix-en-Provence. Le premier projet ou j\'ai était chef de projet dans l\'équipe développement de la mairie.',
-        'features' => [
-            'Création de page par n\'importe quelle utilisateur',
-            'Ajout de lien vers n\'importe quelle page web',
-            'Modification de n\'importe quelle page linktree',
-            'Suppression de n\'importe quelle page linktree',
+        'paragraphe1' => [
+            'AixMobile est une solution innovante développée pour la mairie d\'Aix-en-Provence, inspirée du concept de Linktree mais adaptée aux besoins spécifiques d\'une administration municipale.',
+            'En tant que chef de projet, j\'ai dirigé le développement de cette plateforme qui centralise l\'accès à tous les services numériques de la ville.',
+            'L\'application permet aux différents services de la mairie de créer et gérer leurs propres pages de liens, facilitant l\'accès aux ressources pour les citoyens.'
         ],
-        'challenges' => [
-            'Création d\'une application type linktree pour la mairie d\'Aix-en-Provence.',
+        'paragraphe2' => [
+            'L\'interface d\'édition a été conçue pour être accessible à tous les agents municipaux, même sans compétences techniques particulières.',
+            'Le système permet d\'ajouter, modifier ou supprimer des liens rapidement, avec une prévisualisation en temps réel des changements.',
+            'Chaque service peut personnaliser sa page avec ses propres couleurs et son identité visuelle, tout en respectant la charte graphique de la ville.'
+        ],
+        'paragraphe3' => [
+            'La solution technique repose sur PHP7 pour le backend et CSS3 pour l\'interface utilisateur, garantissant une expérience fluide et moderne.',
+            'Le système de statistiques intégré permet de suivre l\'utilisation des différents liens et d\'optimiser l\'organisation des ressources.'
         ],
         'gallery' => [
             './media/projects/aixmobile/Client.png',
@@ -270,41 +280,38 @@ $config['projectDetails'] = [
             './media/projects/aixmobile/quire.png',
         ],
         'liveDemo' => 'https://aixenprovence.fr/connect',
-        'technicalDetails' => [
-            'Frontend: Tailwind CSS, JavaScript, PHP Laravel',
-            'Backend: Java FX',
-            'Base de données MySQL'
-        ],
         'competence' => [
             'Développer la présence en ligne',
-            'Travailler en mode projet',
             'Mettre à disposition un service informatique'
         ]
     ],
     'DélibArch' => [
         'fullDescription' => 'Mise à jour du code Legacy en PHP 5, en PHP 7. Du site des délibérations du conseil municipal d\'Aix-en-Provence.',
-        'features' => [
-            'Mise à jour du code Legacy de PHP 5, en PHP 7.',
-            'Mise à jour du CSS de la page pour le mettre en accord avec les couleurs de la mairie.',
+        'paragraphe1' => [
+            'DélibArch est une application essentielle pour la mairie d\'Aix-en-Provence, permettant aux citoyens d\'accéder à l\'ensemble des délibérations du conseil municipal.',
+            'Le projet initial, développé en PHP 5, nécessitait une modernisation pour répondre aux standards actuels de sécurité et de performance.',
+            'L\'interface d\'origine manquait d\'ergonomie et ne respectait pas la charte graphique actuelle de la mairie.'
         ],
-        'challenges' => [
-            'Mise à jour du code Legacy de PHP 5, en PHP 7.',
+        'paragraphe2' => [
+            'La migration vers PHP 7 a permis d\'améliorer significativement les performances de l\'application et de renforcer sa sécurité.',
+            'L\'optimisation du code a réduit le temps de chargement des délibérations, facilitant l\'accès aux documents pour les citoyens.',
+            'Le système de recherche a été amélioré pour permettre des requêtes plus précises dans l\'archive des délibérations.'
+        ],
+        'paragraphe3' => [
+            'La refonte visuelle a intégré les nouvelles couleurs et le style de la mairie d\'Aix-en-Provence.',
+            'L\'interface responsive s\'adapte désormais à tous les appareils, permettant une consultation facile sur mobile.',
+            'Le nouveau design met l\'accent sur la lisibilité et l\'accessibilité des documents administratifs.'
         ],
         'gallery' => [
             './media/projects/delibarch/old.png',
             './media/projects/delibarch/new.png',
+            './media/projects/delibarch/interneliste.png',
+            './media/projects/delibarch/interneliste2.png',
         ],
         'liveDemo' => 'https://aixenprovence.fr/Deliberations-du-conseil-municipal-1927',
-        'technicalDetails' => [
-            'Frontend: HTML5, CSS3, JavaScript',
-            'Backend: PHP 5, PHP 7',
-            'Base de données MySQL'
-        ],
         'competence' => [
             'Répondre aux incidents et aux demandes d\'assistance',
-            'Développer la présence en ligne',
-            'Travailler en mode projet',
-            'Mettre à disposition un service informatique'
+            'Développer la présence en ligne'
         ]
     ],
     //////////////////////////////////////////////////////////////////
@@ -312,13 +319,20 @@ $config['projectDetails'] = [
     //////////////////////////////////////////////////////////////////
     'Pixeleur.fr' => [
         'fullDescription' => 'Site web professionnel présentant le studio de développement de jeux vidéo Pixeleur. La plateforme met en avant les projets, l\'expertise et les services du studio, servant de vitrine principale pour l\'entreprise.',
-        'features' => [
-            'Présentation du studio',
-            'Présentation des projets (jeux vidéo, applications mobiles, sites web, bots discord etc...)',
+        'paragraphe1' => [
+            'Pixeleur.fr est la vitrine digitale de mon studio de développement de jeux vidéo, créé en 2019.',
+            'Le site présente notre portfolio diversifié, comprenant des jeux vidéo, des applications mobiles, des sites web et des bots Discord.',
+            'La page d\'accueil met en avant notre identité visuelle unique et notre approche créative du développement de jeux.'
         ],
-        'challenges' => [
-            'Création d\'un site web professionnel',
-            'Intégration avec la base de données pour modification depuis la base admin',
+        'paragraphe2' => [
+            'La section RuleBreaker, notre projet phare, illustre notre capacité à créer des jeux innovants et engageants.',
+            'Chaque projet est présenté avec des captures d\'écran, des vidéos de gameplay et des détails techniques sur leur développement.',
+            'Le portfolio est régulièrement mis à jour pour refléter nos dernières réalisations et l\'évolution de nos compétences.'
+        ],
+        'paragraphe3' => [
+            'La section services détaille notre offre en développement de jeux, création d\'applications et solutions web sur mesure.',
+            'Le site intègre un système de gestion de contenu personnalisé développé en PHP8, permettant une mise à jour facile du portfolio.',
+            'L\'interface administrateur permet de gérer efficacement les projets, les actualités et les contenus multimédias.'
         ],
         'gallery' => [
             './media/projects/pixeleur/pixeleur.png',
@@ -326,84 +340,40 @@ $config['projectDetails'] = [
             './media/projects/pixeleur/service.png',
         ],
         'liveDemo' => 'https://new.pixeleur.fr',
-        'technicalDetails' => [
-            'Frontend: CSS3, JavaScript, HTML5',
-            'Backend: PHP8',
-            'Base de données MySQL'
-        ],
         'competence' => [
             'Développer la présence en ligne',
-            'Travailler en mode projet',
             'Organiser son développement professionnel'
         ]
     ],
-    'Client.Pixeleur.fr' => [
-        'fullDescription' => 'Interface client pour les clients de Pixeleur, permettant aux clients de voir leurs commandes, et de les modifier/télécharger/mettre a jour et ouvrir des tickets envers les développeur de pixeleur en rapport avec leurs commandes.',
-        'features' => [
-            'Voir les commandes',
-            'Modifier les commandes',
-            'Télécharger les commandes',
-            'Ouvrir des tickets en rapport avec leurs commandes', 
+    'Ultraline.app' => [
+        'fullDescription' => 'Ultraline.app est une application de monitoring pour server et hardware en général. Il est disponible pour windows and distribution Linux ARM7, ARM64 et intel64. Ultraline est un dahsboard complétement modulable avec une quinzaine de module différent.',
+        'paragraphe1' => [
+            'Ultraline.app est une solution de monitoring complète et flexible, développée pour répondre aux besoins de surveillance des serveurs et du matériel informatique.',
+            'Le site web présente l\'application et ses fonctionnalités, avec une interface moderne intégrant un système de paiement via Stripe pour l\'accès aux différentes offres.',
+            'La plateforme propose différents plans d\'abonnement adaptés aux besoins des utilisateurs, de l\'usage personnel aux déploiements professionnels.'
         ],
-        'challenges' => [   
-            'Création d\'une interface client pour les clients de Pixeleur',
-            'Création d\'un système de ticket de 0',
+        'paragraphe2' => [
+            'Le dashboard web offre une vue d\'ensemble personnalisable avec une quinzaine de modules différents.',
+            'Les utilisateurs peuvent suivre en temps réel les performances de leurs serveurs et la consommation des ressources.',
+            'L\'interface est conçue pour être intuitive, permettant une configuration rapide des différents modules de surveillance.'
+        ],
+        'paragraphe3' => [
+            'L\'application est compatible avec Windows et diverses distributions Linux (ARM7, ARM64, intel64), assurant une large couverture des environnements.',
+            'Le sie web utilise une architecture moderne avec PHP8 pour le backend, TailwindCSS pour l\'interface, et une base de données MySQL optimisée.',
+            'L\'intégration de l\'API Stripe permet une gestion sécurisée des paiements et des abonnements.',
+            'Le dashboard lui est développé a l\'aide de vue.js et tailwindCSS'
         ],
         'gallery' => [
-            './media/projects/clientpixeleur/home.png',
-            './media/projects/clientpixeleur/produit.png',
-            './media/projects/clientpixeleur/ticket.png',
+            './media/projects/ultraline/website.png',
+            './media/projects/ultraline/dashboard.png',
+            './media/projects/ultraline/dashweb.png',
         ],
-        'liveDemo' => 'https://client.pixeleur.fr',
-        'technicalDetails' => [
-            'Frontend: CSS3, JavaScript, HTML5',
-            'Backend: PHP8',
-            'Base de données MySQL'
-        ],
+        'liveDemo' => 'https://ultraline.app',
         'competence' => [
             'Développer la présence en ligne',
-            'Travailler en mode projet',
             'Mettre à disposition un service informatique',
-            'Organiser son développement professionnel'
-        ]   
-    ],
-    'Admin.Pixeleur.fr' => [
-        'fullDescription' => 'Interface d\'administration pour le site web de Pixeleur, gestion des multiple sites web, des commandes en cours, et des projets.',
-        'features' => [
-            'Gestion des multiple sites web',
-            'Gestion des commandes en cours', 
-        ],
-        'challenges' => [
-            'Création d\'une interface d\'administration pour le site web de Pixeleur',
-        ],
-        'gallery' => [
-            './media/projects/adminpixeleur/admin.png',
-            './media/projects/adminpixeleur/commande.png',
-            './media/projects/adminpixeleur/commande-detail.png',
-            './media/projects/adminpixeleur/profil.png',
-            './media/projects/adminpixeleur/banner.png',
-            './media/projects/adminpixeleur/bdd.png',
-            './media/projects/adminpixeleur/bdd2.png',
-            './media/projects/adminpixeleur/page.png',
-        ],  
-        'liveDemo' => 'https://admin.pixeleur.fr',
-        'technicalDetails' => [
-            'Frontend: CSS3, JavaScript, HTML5',
-            'Backend: PHP8',
-            'Base de données MySQL'
-        ],
-        'competence' => [
-            'Répondre aux incidents et aux demandes d\'assistance',
-            'Travailler en mode projet',
-            'Organiser son développement professionnel'
         ]
-    ],  
-
-
-
-
-
-
+    ],
 ];
 
 
@@ -421,7 +391,7 @@ $config['veille_informatique'] = [
             'Twitter - @levelsio' => 'https://x.com/levelsio',
             'Twitter - @Camo_Enjoyer' => 'https://x.com/Camo_Enjoyer/status/1897235924175741424',
             'Cadenaser - WHAM' => 'https://cadenaser.com/nacional/2025/02/19/microsoft-presenta-wham-una-ia-para-generar-mundos-en-videojuegos-cadena-ser/',
-            'Reddit - r/unrealengine' => 'https://cadenaser.com/nacional/2025/02/19/microsoft-presenta-wham-una-ia-para-generar-mundos-en-videojuegos-cadena-ser/',
+            'Reddit - r/unrealengine' => 'https://www.reddit.com/r/unrealengine/comments/1apqdfe/the_marketplace_is_infested_with_ai_art_doesnt_it/',
             'Le Monde - Cloud Security' => 'https://www.lemonde.fr/securite-cloud/article/2024/09/06/avec-l-essor-de-l-ia-generative-la-securite-cloud-se-reinvente_6305557_475.html'
         ],
         'mots_cles' => [
