@@ -397,31 +397,6 @@ include "./other/config.php";
                 </div>
             </div>
         </section>
-
-        <!-- CA/CT Section -->
-        <section id="documents" class="py-20 bg-black bg-opacity-50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-bold mb-8">Documents</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-                    
-                    <!-- TS Button -->
-                    <div class="card p-6 rounded-lg">
-                        <h3 class="text-xl font-bold mb-4">Tableau de Synthèse</h3>
-                        <div class="space-y-4">
-                            <input type="password" id="ts-password" 
-                                   class="w-full px-4 py-2 rounded-md bg-gray-800 text-white border border-gray-700 focus:border-purple-500 focus:outline-none"
-                                   placeholder="Entrez le mot de passe">
-                            <button onclick="validatePassword('TS')" 
-                                    class="w-full bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 transition-colors">
-                                Accéder au TS
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
     </main>
     <!-- Enhanced Footer -->
     <footer class="bg-black py-12 border-t border-gray-800">
@@ -456,34 +431,6 @@ include "./other/config.php";
     <!-- Add Font Awesome for social icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-
-
-    <!-- Add JavaScript for password validation -->
-    <script>
-        function validatePassword(type) {
-            const password = document.getElementById(`${type.toLowerCase()}-password`).value;
-            
-            fetch('validator.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                body: `type=${type}&password=${encodeURIComponent(password)}`
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    window.open(data.url, '_blank');
-                } else {
-                    alert('Mot de passe incorrect');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('Une erreur est survenue');
-            });
-        }
-    </script>
     <script>
         // Make project details available globally
         window.projectDetails = <?php echo json_encode($config['projectDetails']); ?>;

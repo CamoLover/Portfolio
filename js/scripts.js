@@ -1,5 +1,5 @@
 // Add base path constant at the top of the file
-const BASE_PATH = '/APP/Portfolio/new';
+const BASE_PATH = '';
 
 // Helper function to ensure correct URL formatting
 function getFullUrl(url) {
