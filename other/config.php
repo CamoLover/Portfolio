@@ -28,10 +28,10 @@ $config = [
         ],
     ],
     'skills' => [
-        'Langues' => ['C++', 'PHP', 'JavaScript', 'Python', 'Java', 'HTML5', 'CSS3'],
-        'Frameworks' => ['Node.js', 'Discord.js', 'spring', 'TailwindCSS'],
-        'Outils' => ['Unreal Engine', 'GitHub', 'GitLab', 'Git', 'VS Code', 'Android Studio', 'Intellij Idea'],
-        'Base de données' => ['MySQL', 'Firebase', 'Postgre SQL', 'MariaDB', 'MongoDB']
+        'Langues' => ['C++', 'PHP', 'JavaScript', 'TypeScript', 'Python', 'Java', 'Shell', 'HTML5', 'CSS3'],
+        'Frameworks' => ['Node.js', 'React', 'Angular', 'Discord.js', 'spring', 'Expo Go', 'TailwindCSS'],
+        'Outils' => ['Unreal Engine', 'Docker', 'GitHub', 'GitLab', 'Bitbucket', 'Jira', 'Git', 'VS Code', 'Android Studio', 'Intellij Idea'],
+        'Base de données' => ['MySQL', 'SQLite', 'Firebase', 'Postgre SQL', 'MariaDB', 'MongoDB']
     ],
     'experience' => [
         [
@@ -53,19 +53,19 @@ $config = [
             'description' => 'Développement d\'applications web et mobiles'
         ],
         [
-            'year' => '2022',
-            'company' => 'Mairie d\'Aix-En-Provence',
-            'position' => 'Stagiaire',
-            'description' => 'Stage de 4 semaines au service développement'
-        ],
-        [
             'year' => '2021',
             'company' => 'ITER Organisation',
             'position' => 'Stagiaire',
-            'description' => 'Stage de 4 semaines en développement'
+            'description' => 'Stage de 4 semaines au service développement informatique'
         ]
     ],
     'education' => [
+        [
+            'year' => '2026-2029',
+            'school' => 'Polytech Marseille',
+            'degree' => 'Diplôme d\'ingénieur en informatique',
+            'description' => 'Formation en alternance'
+        ],
         [
             'year' => '2025-2026',
             'school' => 'Ynov Sophia Antipolis',
@@ -91,18 +91,27 @@ $config['skillIcons'] = [
     'C++' => 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg',
     'PHP' => 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg',
     'JavaScript' => 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+    'TypeScript' => 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
     'Python' => 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
     'Java' => 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
+    'Shell' => 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg',
     'HTML5' => 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
     'CSS3' => 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
     'Node.js' => 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+    'React' => 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+    'Angular' => 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg',
     'Discord.js' => 'https://icon.icepanel.io/Technology/svg/Discord.js.svg',
+    'Expo Go' => 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/expo/expo-original.svg',
     'Unreal Engine' => 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unrealengine/unrealengine-original.svg',
+    'Docker' => 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
     'GitHub' => 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
     'GitLab' => 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg',
+    'Bitbucket' => 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bitbucket/bitbucket-original.svg',
+    'Jira' => 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg',
     'VS Code' => 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg',
     'Android Studio' => 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg',
     'MySQL' => 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
+    'SQLite' => 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg',
     'Firebase' => 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg',
     'Git' => 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
     'Postgre SQL' => 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
