@@ -22,7 +22,7 @@ $config = [
         [
             'name' => 'Profen.app',
             'url' => 'https://profen.app',
-            'description' => 'Profen.app est une plateforme de gestion de projets et de portfolio en ligne, conçue pour les développeurs et les créateurs. Elle offre une interface intuitive pour présenter des projets, partager des compétences et mettre en avant des réalisations professionnelles. La plateforme permet également de créer un portfolio personnalisé, facilitant ainsi la mise en valeur des compétences et des expériences dans le domaine du développement informatique.',
+            'description' => 'Profen.app est une plateforme de chiffrement client-side sécurisée permettant de partager textes et fichiers de manière confidentielle. Le système utilise AES-256-GCM et Argon2id pour garantir une sécurité cryptographique de niveau professionnel. Disponible en application web, mobile, extension Chrome/Firefox, et entièrement open-source.',
             'skills' => ['PHP', 'JavaScript', 'HTML5', 'CSS3', 'MySQL', 'TailwindCSS', 'Argon2Id', 'AES-256-GCM'],
             'ownership' => 'pixeleur'
         ],
@@ -38,25 +38,29 @@ $config = [
             'year' => '2019-Present',
             'company' => 'Pixeleur',
             'position' => 'Fondateur & Directeur développement',
-            'description' => 'Studio de développement personnel, créateur de nombreux projets'
+            'description' => 'Studio de développement personnel, créateur de nombreux projets',
+            'logo' => './media/image/logo/pixeleur.png'
         ],
         [
             'year' => '2025-Present',
             'company' => 'TravelJuice',
             'position' => 'Développeur Java Angular (Alternance)',
-            'description' => 'Développement d\'applications Java et Angular pour la plateforme DMP (data management platform) de TravelJuice'
+            'description' => 'Développement d\'applications Java et Angular',
+            'logo' => './media/image/logo/traveljuice.jpg'
         ],
         [
             'year' => '2023-2025',
             'company' => 'Mairie d\'Aix-En-Provence',
             'position' => 'Développeur Web & Mobile (Alternance)',
-            'description' => 'Développement d\'applications web et mobiles'
+            'description' => 'Développement d\'applications web et mobiles',
+            'logo' => './media/image/logo/aix.webp'
         ],
         [
             'year' => '2021',
             'company' => 'ITER Organisation',
             'position' => 'Stagiaire',
-            'description' => 'Stage de 4 semaines au service développement informatique'
+            'description' => 'Stage de 4 semaines au service développement informatique',
+            'logo' => './media/image/logo/iter.webp'
         ]
     ],
     'education' => [
@@ -64,25 +68,29 @@ $config = [
             'year' => '2026-2029',
             'school' => 'Polytech Marseille',
             'degree' => 'Diplôme d\'ingénieur en informatique',
-            'description' => 'Formation en alternance'
+            'description' => 'Formation en alternance',
+            'logo' => './media/image/logo/polytech.jpg'
         ],
         [
             'year' => '2025-2026',
             'school' => 'Ynov Sophia Antipolis',
             'degree' => 'Bachelor 3 Informatique',
-            'description' => 'Formation en alternance'
+            'description' => 'Formation en alternance',
+            'logo' => './media/image/logo/ynov.jpg'
         ],
         [
             'year' => '2023-2025',
             'school' => 'CCI Vaucluse Provence',
             'degree' => 'BTS SIO option SLAM',
-            'description' => 'Formation en alternance - Solutions Logicielles et Applications Métiers'
+            'description' => 'Formation en alternance',
+            'logo' => './media/image/logo/cci.jpg'
         ],
         [
             'year' => '2020',
             'school' => 'Lycée Saint-Éloi Aix-En-Provence',
             'degree' => 'Bac Pro SN',
-            'description' => 'Spécialité Systèmes Numériques'
+            'description' => 'Spécialité Systèmes Numériques',
+            'logo' => './media/image/logo/saint-eloi.png'
         ]
     ]
 ];
@@ -174,14 +182,19 @@ $config['projectDetails'] = [
     'ASR-7' => [
         'fullDescription' => 'ASR-7 est un projet de développement d\'un assistant vocal intelligent, conçu pour offrir une expérience utilisateur fluide et intuitive. L\'assistant utilise des technologies avancées de reconnaissance vocale et de traitement du langage naturel pour comprendre et répondre aux commandes vocales de manière efficace.',
         'paragraphe1' => [
-            '',
-            '',
-            ''
+            'Interface de paramétrage avancée',
+            'L\'interface de configuration offre un contrôle total : activation de la synthèse vocale xVAsynth, gestion des souvenirs, modes d\'interaction (texte, vocal, immersif), verbosité des réponses et langue (anglais, français, espagnol).',
+            'Paramètres avancés avec gestion de l\'état émotionnel (curiosité, irritation, ennui, attachement) et affichage temps réel du corps virtuel (posture, luminance, mains). Personnalisation complète via un tableau de bord intuitif.'
         ],
         'paragraphe2' => [
-            '',
-            '',
-            ''
+            'Mode immersif conversationnel',
+            'Vue immersive avec synthèse vocale xVAsynth et modèle Assaultron de Fallout 4. Interface minimaliste créant une personnalité distinctive (25% amical, 70% sarcastique, 5% séducteur).',
+            'Reconnaissance vocale temps réel (Mistral Voxtral) pour conversations mains-libres et vision webcam (MediaPipe) pour détection contextuelle. Architecture embodied agent traduisant les intentions en expressions corporelles virtuelles.'
+        ],
+        'paragraphe3' => [
+            'Tableau de bord administrateur',
+            'Monitoring temps réel (port 8081) affichant performances système : métriques API, synthèse vocale, tokens LLM et délais composants. Graphiques Chart.js avec stats min/avg/max sur 1000 points.',
+            'Interface montrant uptime, statut services (AI Core, Voice, Discord Bot) et journal d\'erreurs. Export JSON et rapports Markdown automatiques. Monitoring production-grade thread-safe sans impact performance.'
         ],
         'gallery' => [
             './media/projects/camolover/asr1.png',
@@ -198,14 +211,19 @@ $config['projectDetails'] = [
     'Morse Assembly Language' => [
         'fullDescription' => 'Morse Assembly Language est un langage de programmation esotérique conçu pour être écrit en code Morse. Chaque instruction est représentée par une séquence de points et de traits, ce qui rend la programmation à la fois un défi et une expérience unique. Ce langage explore les limites de la communication et de la programmation, offrant une perspective originale sur la manière dont les instructions peuvent être codées et interprétées.',
         'paragraphe1' => [
-            '',
-            '',
-            ''
+            'Documentation Esolangs.org',
+            'Morse Assembly Language (MAL) est référencé sur Esolangs.org, la plateforme de référence pour les langages ésotériques. Le langage fusionne assembly et code Morse, créant un système Turing-complet avec instructions, registres et valeurs encodés en points et traits.',
+            'La documentation complète détaille la syntaxe (espaces entre caractères, " / " entre tokens, newlines entre lignes), l\'architecture VM (6 registres, 1024 cellules mémoire, stack, flags CPU), et le jeu d\'instructions complet (MOV, ADD, JMP, OUT, etc.).'
         ],
         'paragraphe2' => [
-            '',
-            '',
-            ''
+            'Exemple de programme',
+            'Comparaison directe entre assembly classique et Morse Assembly. Le programme "Hello World" illustre la conversion : MOV AX, 72 devient "-- --- ...- / .- -..- --..-- / --... ..---". Chaque instruction assembly est transformée caractère par caractère en séquence Morse.',
+            'L\'interpréteur Python (morse_interpreter.py) exécute les fichiers .morse, avec support complet des opérations arithmétiques (ADD, SUB, MUL, DIV), logiques (AND, OR, XOR, NOT), sauts conditionnels (JE, JNE, JG, JL) et I/O (IN, OUT).'
+        ],
+        'paragraphe3' => [
+            'Alphabet Morse complet',
+            'Table de correspondance complète : lettres A-Z (.- à --...), chiffres 0-9 (.---- à -----), et caractères spéciaux (virgule --..-- , point .-.-.- , etc.). Encodage standard Morse international utilisé pour toutes les conversions.',
+            'L\'assembleur (morse_assembler.py) convertit assembly → Morse tandis que l\'interpréteur peut aussi servir d\'outil standalone de conversion texte ↔ Morse (--encode / --decode). Tribute aux télécommunications historiques via programmation moderne.'
         ],
         'gallery' => [
             './media/projects/camolover/morse1.png',
@@ -220,21 +238,21 @@ $config['projectDetails'] = [
         ]
     ],
     'Profen.app' => [
-        'fullDescription' => '',
+        'fullDescription' => 'Profen.app est une plateforme de chiffrement client-side sécurisée permettant de partager textes et fichiers de manière confidentielle. Le système utilise AES-256-GCM et Argon2id pour garantir une sécurité cryptographique de niveau professionnel. Disponible en application web, mobile, extension Chrome/Firefox, et entièrement open-source.',
         'paragraphe1' => [
-            '',
-            '',
-            ''
+            'Interface de chiffrement',
+            'Page principale offrant chiffrement texte/fichier avec sécurité client-side. AES-256-GCM (256-bit security, NIST approved) et Argon2id KDF (64MB memory, 4 iterations, résistant GPU/ASIC). Toutes opérations cryptographiques dans le navigateur via Web Crypto API.',
+            'Interface intuitive avec validation password strength, normalisation encodage, génération CSPRNG (256-bit entropy). Zéro plaintext transmis au serveur - confidentialité totale garantie par design cryptographique.'
         ],
         'paragraphe2' => [
-            '',
-            '',
-            ''
+            'Résultat et partage',
+            'Module post-chiffrement affichant QR code, message succès et lien slug unique (128-bit entropy). Data key chiffrée séparément avec password-derived key (Argon2id). GCM authentication tag (128-bit) garantissant intégrité.',
+            'Système double-encryption : data key aléatoire chiffre contenu, password key chiffre data key. Architecture résistante brute-force (~2¹²⁸ opérations) et forgery (2⁻¹²⁸ probabilité). Partage sécurisé via URL courte.'
         ],
         'paragraphe3' => [
-            '',
-            '',
-            ''
+            'Page de déchiffrement',
+            'Interface déchiffrement avec validation authentification GCM et vérification intégrité. Constant-time comparison prévient timing attacks. Support IND-CCA2 security via unique IVs (96-bit) par opération.',
+            'Multi-plateforme : web app, mobile app, extensions Chrome/Firefox. Open-source avec compliance NIST SP 800-38D/132, RFC 9106, FIPS 140-2. Post-quantum ready (AES-256 = 128-bit quantum resistance).'
         ],
         'gallery' => [
             './media/projects/pixeleur/profen1.png',
@@ -243,8 +261,8 @@ $config['projectDetails'] = [
         ],
         'liveDemo' => 'https://new.pixeleur.fr',
         'competence' => [
-            '',
-            '',
+            'Implémentation cryptographie client-side AES-256-GCM et Argon2id',
+            'Architecture multi-plateforme (web, mobile, extensions navigateur) open-source'
         ]
     ]
 ];

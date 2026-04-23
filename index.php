@@ -253,10 +253,17 @@ include "./other/config.php";
                         <h3 class="text-2xl font-bold mb-6">Parcours Professionnel</h3>
                         <?php foreach ($config['experience'] as $exp): ?>
                         <div class="card p-6 rounded-lg mb-4">
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h4 class="font-bold"><?php echo $exp['company']; ?></h4>
-                                    <p class="text-purple-400"><?php echo $exp['position']; ?></p>
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="flex items-center gap-4 flex-1">
+                                    <?php if (isset($exp['logo'])): ?>
+                                    <img src="<?php echo $exp['logo']; ?>"
+                                         alt="<?php echo $exp['company']; ?>"
+                                         class="w-12 h-12 rounded-lg object-cover">
+                                    <?php endif; ?>
+                                    <div>
+                                        <h4 class="font-bold"><?php echo $exp['company']; ?></h4>
+                                        <p class="text-purple-400"><?php echo $exp['position']; ?></p>
+                                    </div>
                                 </div>
                                 <span class="text-gray-400"><?php echo $exp['year']; ?></span>
                             </div>
@@ -268,10 +275,17 @@ include "./other/config.php";
                         <h3 class="text-2xl font-bold mb-6">Formation</h3>
                         <?php foreach ($config['education'] as $edu): ?>
                         <div class="card p-6 rounded-lg mb-4">
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h4 class="font-bold"><?php echo $edu['school']; ?></h4>
-                                    <p class="text-purple-400"><?php echo $edu['degree']; ?></p>
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="flex items-center gap-4 flex-1">
+                                    <?php if (isset($edu['logo'])): ?>
+                                    <img src="<?php echo $edu['logo']; ?>"
+                                         alt="<?php echo $edu['school']; ?>"
+                                         class="w-12 h-12 rounded-lg object-cover">
+                                    <?php endif; ?>
+                                    <div>
+                                        <h4 class="font-bold"><?php echo $edu['school']; ?></h4>
+                                        <p class="text-purple-400"><?php echo $edu['degree']; ?></p>
+                                    </div>
                                 </div>
                                 <span class="text-gray-400"><?php echo $edu['year']; ?></span>
                             </div>
